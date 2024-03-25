@@ -14,7 +14,9 @@ class _ForgotPasswordState extends State<ForgotPassword> {
   Widget build(BuildContext context) {
     return  Scaffold(
       
-      body: Column( 
+      body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child:  Column( 
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Padding(
@@ -60,6 +62,6 @@ class _ForgotPasswordState extends State<ForgotPassword> {
         )
 
       ],),
-    );
+    ));
   }
 }

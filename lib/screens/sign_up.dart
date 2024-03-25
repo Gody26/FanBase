@@ -13,7 +13,10 @@ class _SignUpState extends State<SignUp> {
   Widget build(BuildContext context) {
     return  Scaffold(
       
-      body: Column( 
+      body: 
+      SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Column( 
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
          Padding(
@@ -89,6 +92,6 @@ class _SignUpState extends State<SignUp> {
   ),
   ],),
       
-    );
+     ) );
   }
 }

@@ -18,7 +18,10 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return  Scaffold(
       backgroundColor: const Color.fromARGB(255, 255, 255, 255),
-       body: Column(
+       body:SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        
+        child: Column (
         children: [          
           Padding(
             padding: const EdgeInsets.all(100.0),
@@ -119,7 +122,7 @@ class _LoginState extends State<Login> {
             ),
           ),
         ])
-    );
+     ) );
     
   }
 }

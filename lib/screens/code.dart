@@ -13,7 +13,9 @@ class _CodeState extends State<Code> {
   Widget build(BuildContext context) {
     return Scaffold(
 
-      body:  Column(
+      body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Column(
         children: [
           Center(
             child: Padding(
@@ -50,6 +52,6 @@ class _CodeState extends State<Code> {
           ),
         ],
       ),
-    );
+     ) );
   }
 }
