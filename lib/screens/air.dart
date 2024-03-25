@@ -10,15 +10,26 @@ class AirPage extends StatefulWidget {
 class _AirPageState extends State<AirPage> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: SingleChildScrollView(
+    return Scaffold(
+       appBar: AppBar(
+        title: const Text("The Air", style: TextStyle(fontWeight: FontWeight.bold),),
+        centerTitle: true,
+        backgroundColor: Colors.blue,
+       ),
+      body: const SingleChildScrollView(
         scrollDirection: Axis.vertical,
-        child:  Column(
-          children: [
-            Text("Welcome to Air")
-          ],
+        child: Padding(padding: EdgeInsets.all(50.0),
+        child: Center(
+          child: Column(
+            children: [
+              Text("Welcome to Air",  textAlign: TextAlign.center, style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
+              
+            ],
+          ),
+        ),)
+      
         ),
-      ),
-    );
+      );
+    
   }
 }

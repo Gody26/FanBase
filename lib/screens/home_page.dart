@@ -78,7 +78,7 @@ class HomePage extends StatelessWidget{
         ),
        ),
        appBar: AppBar(
-        title: const Text("FanBase"),
+        title: const Text("FanBase", style: TextStyle(fontWeight: FontWeight.bold),),
         centerTitle: true,
         backgroundColor: Colors.blue,
        ),

@@ -21,9 +21,8 @@ void initState() {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      body: SingleChildScrollView(
-        scrollDirection: Axis.vertical, 
-      child: Center(
+      body: 
+       Center(
         child: Column(
           
           mainAxisAlignment: MainAxisAlignment.center,
@@ -33,6 +32,6 @@ void initState() {
           ],
         ),
       ),
-     ) );
+     ); 
   }
 }
