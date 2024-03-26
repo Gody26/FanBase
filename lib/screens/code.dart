@@ -1,4 +1,5 @@
 import 'package:fan_base/screens/home_page.dart';
+import 'package:fan_base/screens/login.dart';
 import 'package:flutter/material.dart';
 
 class Code extends StatefulWidget {
@@ -40,7 +41,7 @@ class _CodeState extends State<Code> {
                         Navigator.pushReplacement(
                           context, 
                           MaterialPageRoute<void>(
-                          builder: (BuildContext context) => const HomePage(),
+                          builder: (BuildContext context) => const Login(),
                           ));
                       }, 
                       

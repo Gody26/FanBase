@@ -83,33 +83,111 @@ class HomePage extends StatelessWidget{
         backgroundColor: Colors.blue,
        ),
 
-       body: const SingleChildScrollView(
+       body:  SingleChildScrollView(
         scrollDirection: Axis.vertical,
-        child:  Column(children: [
+        
+        child:  Padding( 
+          padding: const EdgeInsets.all(20.0), 
+          child: Column(
+            children: [const Text("What would you like?", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
 
-         Padding(
-          padding: EdgeInsets.all(20),
-          child: TextField(decoration: InputDecoration(
-          hintText: "I am a child of Column",
-          border: OutlineInputBorder(),
-        ),),),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column( children: [
+                Row(
+                  children: [
+                    Expanded(
+                      child: Container(
+                        height: 100,
+                        color: Colors.grey,
+                      ),
+                    ),
+              
+                    const SizedBox(width: 20,),
+              
+                    Expanded(
+                        child: Container(
+                         height: 100,
+                         color: Colors.grey,
+                         
+                                        
+                       ),
+                    )
+                  ],
+                ),
+              ],),
+            ),
 
-         SizedBox(height: 10),
 
-         Padding(
-          padding: EdgeInsets.all(20),
-          child: TextField(decoration: InputDecoration(
-          hintText: "I am a child of Column",
-          border: OutlineInputBorder(),
-        ),),),
-      
-
-      Padding(padding: EdgeInsets.all(10), 
-      child: Image(image: NetworkImage(
-        'https://images.ctfassets.net/c9t6u0qhbv9e/0VMDjyffUuWwyCP3eOJuP/e060dc1d4be602ecfc64baed026ca3ce/2023_BMW_M4_Review_Lead_In.jpeg'))
-         
-
-    ),],),
+           const Padding(
+             padding: EdgeInsets.all(15.0),
+             child: Center(
+               child: Row( 
+                children: [
+                  Column( 
+                    children: [
+                      Card( 
+                            color: Colors.white,
+                            child: SizedBox( 
+                              height: 100,
+                              width: 100,
+                              child: Icon(Icons.sports_soccer, color: Colors.black,) 
+                            ),
+                          ),
+                          Text("Soccer"),
+                    ],
+                  ),
+               
+                  SizedBox(height: 5,),
+               
+                   Column(
+                    children: [
+                      Card(
+                            
+                            color: Colors.white,
+                            child: SizedBox( 
+                              height: 100,
+                              width: 100,
+                              child: Icon(Icons.sports_basketball, color: Colors.black,) 
+                              
+                              
+                            ),
+                          ),
+                          Text("Basketball"),
+                    ],
+                  ),
+               
+                  SizedBox(height: 5,),
+               
+                   Column(
+                    children: [
+                      Card(
+                            
+                            color: Colors.white,
+                            child: SizedBox( 
+                              height: 100,
+                              width: 100,
+                              child: Icon(Icons.sports_tennis, color: Colors.black,) 
+                              
+                            ),
+                          ),
+                          Text("Tennis"),
+                    ],
+                  ),
+               
+                  SizedBox(height: 5,),
+               
+                  
+                      
+               
+                     
+                ],
+               ),
+             ),
+           )
+            ],
+          ),
+        ),
      
     ));
   }

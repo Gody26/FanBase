@@ -1,3 +1,4 @@
+import 'package:fan_base/screens/login.dart';
 import 'package:flutter/material.dart';
 
 class Settings extends StatefulWidget {
@@ -16,48 +17,59 @@ class _SettingsState extends State<Settings> {
         centerTitle: true,
         backgroundColor: Colors.blue,
        ),
-      body: const SingleChildScrollView(
+      body:  SingleChildScrollView(
         scrollDirection: Axis.vertical,
-        child: Padding(padding: EdgeInsets.all(50.0),
+        child: Padding(padding:const EdgeInsets.all(50.0),
         child: Center( child: Column(
           children: [
-            CircleAvatar(
+           const CircleAvatar(
                     backgroundImage: NetworkImage(
                       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS167rCp9mKFPIQo0E5lfr9p2OIqZ2XpU9wgbDkoUC5tQ&s"),
                       radius: 70,
                     ),
 
-                    SizedBox(height: 15,),
+                    const SizedBox(height: 15,),
 
-                    Text("Sean.M.", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+                   const Text("Sean.M.", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
 
-                    SizedBox(height: 30,),
+                    const SizedBox(height: 30,),
 
-                    Divider(height: 10,),
+                    const Divider(height: 10,),
 
-                     ListTile(
+                     const ListTile(
               leading:  Icon(Icons.account_box_rounded, ),
               title:  Text("Account"),),
 
-              Divider(height: 10,),
+              const Divider(height: 10,),
 
-                    ListTile(
+                  const  ListTile(
               leading:  Icon(Icons.display_settings, ),
               title:  Text("Display"),),
 
-               Divider(height: 10,),
+               const Divider(height: 10,),
 
-                    ListTile(
+                   const ListTile(
               leading:  Icon(Icons.privacy_tip, ),
               title:  Text("Privacy"),),
 
-               Divider(height: 10,),
+               const Divider(height: 10,),
 
-                    ListTile(
+                    const ListTile(
               leading:  Icon(Icons.help, ),
               title:  Text("Help"),),
 
-               Divider(height: 10,),
+               const Divider(height: 10,),
+
+                ElevatedButton(onPressed: (){
+                    
+                    Navigator.pushReplacement(
+                      context, 
+                      MaterialPageRoute<void>(
+                      builder: (BuildContext context) => const Login(),
+                      ));
+                  }, 
+                  
+                  child: const Text("Log Out", style: TextStyle(color: Colors.black),),),
 
 
               
