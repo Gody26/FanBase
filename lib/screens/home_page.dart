@@ -1,8 +1,11 @@
 import 'package:fan_base/screens/air.dart';
+import 'package:fan_base/screens/arena_one.dart';
 import 'package:fan_base/screens/events_calendar.dart';
+import 'package:fan_base/screens/freedom_heights.dart';
 import 'package:fan_base/screens/settings.dart';
 import 'package:fan_base/screens/shop.dart';
 import 'package:flutter/material.dart';
+
 
 
 class HomePage extends StatelessWidget{
@@ -80,46 +83,22 @@ class HomePage extends StatelessWidget{
        appBar: AppBar(
         title: const Text("FanBase", style: TextStyle(fontWeight: FontWeight.bold),),
         centerTitle: true,
-        backgroundColor: Colors.blue,
+        backgroundColor:const Color.fromARGB(255, 237, 230, 230),
        ),
 
-       body:  SingleChildScrollView(
+       body:   SingleChildScrollView(
         scrollDirection: Axis.vertical,
         
         child:  Padding( 
-          padding: const EdgeInsets.all(20.0), 
+          padding:  const EdgeInsets.all(20.0), 
           child: Column(
-            children: [const Text("What would you like?", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+            children: [ const Text("What we offer", style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),),
 
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Column( children: [
-                Row(
-                  children: [
-                    Expanded(
-                      child: Container(
-                        height: 100,
-                        color: Colors.grey,
-                      ),
-                    ),
-              
-                    const SizedBox(width: 20,),
-              
-                    Expanded(
-                        child: Container(
-                         height: 100,
-                         color: Colors.grey,
-                         
-                                        
-                       ),
-                    )
-                  ],
-                ),
-              ],),
-            ),
+          
 
+           
 
-           const Padding(
+       const  Padding(
              padding: EdgeInsets.all(15.0),
              child: Center(
                child: Row( 
@@ -131,7 +110,7 @@ class HomePage extends StatelessWidget{
                             child: SizedBox( 
                               height: 100,
                               width: 100,
-                              child: Icon(Icons.sports_soccer, color: Colors.black,) 
+                              child: Icon(Icons.sports_soccer, color: Colors.blue,) 
                             ),
                           ),
                           Text("Soccer"),
@@ -148,7 +127,7 @@ class HomePage extends StatelessWidget{
                             child: SizedBox( 
                               height: 100,
                               width: 100,
-                              child: Icon(Icons.sports_basketball, color: Colors.black,) 
+                              child: Icon(Icons.sports_basketball, color: Colors.blue,) 
                               
                               
                             ),
@@ -162,30 +141,153 @@ class HomePage extends StatelessWidget{
                    Column(
                     children: [
                       Card(
-                            
                             color: Colors.white,
                             child: SizedBox( 
                               height: 100,
                               width: 100,
-                              child: Icon(Icons.sports_tennis, color: Colors.black,) 
-                              
+                              child: Icon(Icons.sports_tennis, color: Colors.blue,) 
                             ),
                           ),
                           Text("Tennis"),
                     ],
                   ),
                
-                  SizedBox(height: 5,),
-               
-                  
-                      
-               
-                     
+                  SizedBox(height: 5,)
                 ],
+                
                ),
-             ),
-           )
-            ],
+             ), 
+           ),
+        Padding(padding: const EdgeInsets.all(0.0),
+        child: Column(
+          children: [
+            Stack(
+              children: [
+                Image.asset('assets/images/Football boot.jpeg', ),
+               
+               const Positioned(
+      top: 0, 
+      left: 0, 
+      right: 0,
+      bottom: 0,
+      child: Center(
+        child: Text(
+          'Begin your journey!',
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontSize: 50,
+            fontWeight: FontWeight.bold,
+            color: Color(0xffFFFFFF),
+          ),
+        ),
+      ),
+    ),
+              ],
+            ),
+
+            const SizedBox(height: 20,),
+
+            const Text('Suggestions', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),),
+
+            Row(
+              children: [
+                Expanded(
+                  
+                    child: Column(
+                      children: [ Stack( children: [
+                        Image.asset('assets/images/Football boot.jpeg'),
+                         ElevatedButton(onPressed: (){
+                    
+                    Navigator.push(
+                      context, 
+                      MaterialPageRoute<void>(
+                      builder: (BuildContext context) => const ArenaOne(),
+                      ));
+                  }, 
+                  
+                  child: const Text("Book", style: TextStyle(color: Colors.black),),)
+                        ]),
+                        const Text('Arena1', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),)
+                      ],
+                    ),
+                  
+                ),
+
+                const SizedBox( width: 20,),
+
+                  Expanded(
+                  
+                    child: Column(
+                      children: [ Stack( children: [
+                        Image.asset('assets/images/Football boot.jpeg', ),
+                         ElevatedButton(onPressed: (){
+                    
+                    Navigator.push(
+                      context, 
+                      MaterialPageRoute<void>(
+                      builder: (BuildContext context) => const FreedomHeights(),
+                      ));
+                  }, 
+                  
+                  child: const Text("Book", style: TextStyle(color: Colors.black),),)
+                        ]),
+                        const Text('Freedom heights', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),)
+                      ],
+                    ),
+                  
+                ),
+              ],
+            ),
+
+            Row(
+              children: [
+                  Expanded(
+                    child: Column(
+                      children: [ Stack( children: [
+                        Image.asset('assets/images/Bear with glasses pic.jpg'),
+
+                         ElevatedButton(onPressed: (){
+                    Navigator.push(
+                      context, 
+                      MaterialPageRoute<void>(
+                      builder: (BuildContext context) => const ArenaOne(),
+                      ));}, 
+                  child: const Text("Book", style: TextStyle(color: Colors.black),),)
+                        ]),
+                        const Text('Arena1', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),)
+                      ],
+                    ),
+                  
+                ),
+
+                const SizedBox( width: 20,),
+
+                 Expanded(        
+                    child: Column(
+                      children: [ Stack( children: [
+                        Image.asset('assets/images/Bear with glasses pic.jpg'),
+                        
+                         ElevatedButton(onPressed: (){
+                    Navigator.push(
+                      context, 
+                      MaterialPageRoute<void>(
+                      builder: (BuildContext context) => const FreedomHeights(),
+                      ));}, 
+                  child: const Text("Book", style: TextStyle(color: Colors.black),),)
+                        ]),
+                        const Text('Freedom Heights', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),)
+                      ],
+                    ),
+                  
+                ),
+              ],
+            ),
+
+            const SizedBox(height: 30,),
+
+            const Text('Favourites',  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),)
+          ],
+        ),)    ],
           ),
         ),
      

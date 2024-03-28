@@ -1,4 +1,3 @@
-import 'package:fan_base/screens/home_page.dart';
 import 'package:fan_base/screens/login.dart';
 import 'package:flutter/material.dart';
 
